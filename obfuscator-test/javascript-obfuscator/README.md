@@ -19,6 +19,11 @@ $ sudo npm install tsc -g
 # javascript-obfuscator 설치
 $ npm install -D javascript-obfuscator -g
 ```
+- 기타
+```bash
+npm install react-rnd
+npm install recoil
+```
 
 ## javascript-obfuscator
 - javascript 파일만 난독화 가능 (.js)
