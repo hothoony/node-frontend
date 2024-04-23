@@ -32,7 +32,7 @@ npm install recoil
 
 ## javascript-obfuscator 로 난독화하기
 
-#### `.ts` 파일을 `.js` 로 컴파일하기
+#### `.ts` 파일은 `.js` 로 컴파일한 후에 난독화한다
 ```bash
 # ./src/utils/Util.js 파일이 생성된다
 $ tsc ./src/utils/Util.ts
@@ -82,6 +82,15 @@ module.exports =
         '\w*', // 난독화 제외
     ],
 }
+```
+
+#### UI 가 들어있는 파일은 난독화가 안된다
+```bash
+# error
+$ javascript-obfuscator ./src/components/Greeting1.jsx --output ./src/components/Greeting1-out.jsx --config ../js-obfuscator-config.js
+$ javascript-obfuscator ./src/components/Greeting2.tsx --output ./src/components/Greeting2-out.tsx --config ../js-obfuscator-config.js
+$ javascript-obfuscator ./src/components/Greeting3.js --output ./src/components/Greeting3-out.js --config ../js-obfuscator-config.js
+$ javascript-obfuscator ./src/components/Greeting4.ts --output ./src/components/Greeting4-out.ts --config ../js-obfuscator-config.js
 ```
 
 ## 난독화한 소스코드로 테스트
