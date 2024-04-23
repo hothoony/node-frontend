@@ -91,6 +91,9 @@ module.exports =
 ```
 
 #### 난독화한 파일 `Util-out.js` 를 임포트해서 테스트해본다
+- `Util.ts` 소스코드 원본
+- `Util.js` .ts 를 컴파일한 파일
+- `Util-out.js` 난독화한 파일
 ```javascript
 // src/components/GreetingEx.tsx
 
