@@ -14,8 +14,8 @@ root.render(
   <React.StrictMode>
     {/* <App /> */}
     <GreetingEx name='greetingEx eee' />
-    <Greeting1 name='greeting 111' />
-    <Greeting2 name='greeting 222' />
+    {/* <Greeting1 name='greeting 111' /> */}
+    {/* <Greeting2 name='greeting 222' /> */}
   </React.StrictMode>
 );
 
