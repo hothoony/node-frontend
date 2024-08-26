@@ -1,6 +1,6 @@
 import axios from "axios";
-// import userService from "./user-service1";
-import userService from "./user-service2";
+// import userService from "./user-service1-class";
+import userService from "./user-service2-function";
 
 const MyApp = () => {
 
