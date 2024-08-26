@@ -1,20 +1,25 @@
-import axios from "axios";
-// import userService from "./user-service1-class";
+// import userService from "./services/user-service1-class";
 import userService from "./services/user-service2-function";
 
 const MyApp = () => {
 
-    const axiosInstance = axios.create({
-        baseURL: 'https://dummyjson.com',
-        // timeout: 1000,
-        // headers: {'X-Custom-Header': 'foobat'},
-    });
+    const userAdd = async () => {
+        console.log('userAdd');
+        const data = {
+            "firstName": "Muhammad",
+            "lastName": "Ovi",
+            "age": 250
+        };
+        const result = await userService.addUser(data);
+        console.log('result', result);
+    }
 
     const userList = async () => {
         console.log('userList');
         const result = await userService.getUserList();
         console.log('result', result);
     }
+
     const userDetail = async () => {
         console.log('userDetail');
         const result = await userService.getUserDetail(3);
@@ -25,6 +30,9 @@ const MyApp = () => {
         <div>
             <div>
                 MyApp
+            </div>
+            <div>
+                <button onClick={userAdd}>userAdd</button>
             </div>
             <div>
                 <button onClick={userList}>userList</button>
