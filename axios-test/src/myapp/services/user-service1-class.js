@@ -8,7 +8,7 @@ class UserService {
             // timeout: 1000,
             headers: {
                 'Content-Type': 'application/json',
-                'X-Custom-Header': 'foobat',
+                'X-Custom-Header': 'foobar',
             },
         });
     }
@@ -53,6 +53,40 @@ class UserService {
         try {
             // console.log('getUserDetail');
             const result = await this.axiosInstance.get(`/users/${userId}`);
+            // console.log('result', result);
+            // console.log('result status', result.status, result.statusText);
+            if (result.status !== 200) {
+                throw new Error(`${result.status} ${result.statusText}`);
+            }
+            // console.log('result.data', result.data);
+            return result.data;
+        } catch (err) {
+            console.error('err', err);
+            throw err;
+        }
+    }
+
+    async modifyUser(userId, data) {
+        try {
+            // console.log('modifyUser');
+            const result = await this.axiosInstance.put(`/users/${userId}`, data);
+            // console.log('result', result);
+            // console.log('result status', result.status, result.statusText);
+            if (result.status !== 200) {
+                throw new Error(`${result.status} ${result.statusText}`);
+            }
+            // console.log('result.data', result.data);
+            return result.data;
+        } catch (err) {
+            console.error('err', err);
+            throw err;
+        }
+    }
+
+    async deleteUser(userId) {
+        try {
+            // console.log('deleteUser');
+            const result = await this.axiosInstance.delete(`/users/${userId}`);
             // console.log('result', result);
             // console.log('result status', result.status, result.statusText);
             if (result.status !== 200) {

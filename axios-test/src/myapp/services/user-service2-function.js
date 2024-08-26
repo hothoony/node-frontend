@@ -62,10 +62,46 @@ const getUserDetail = async (userId) => {
     }
 };
 
+const modifyUser = async (userId, data) => {
+    try {
+        // console.log('modifyUser');
+        const result = await axiosInstance.put(`/users/${userId}`, data);
+        // console.log('result', result);
+        // console.log('result status', result.status, result.statusText);
+        if (result.status !== 200) {
+            throw new Error(`${result.status} ${result.statusText}`);
+        }
+        // console.log('result.data', result.data);
+        return result.data;
+    } catch (err) {
+        console.error('err', err);
+        throw err;
+    }
+};
+
+const deleteUser = async (userId) => {
+    try {
+        // console.log('deleteUser');
+        const result = await axiosInstance.delete(`/users/${userId}`);
+        // console.log('result', result);
+        // console.log('result status', result.status, result.statusText);
+        if (result.status !== 200) {
+            throw new Error(`${result.status} ${result.statusText}`);
+        }
+        // console.log('result.data', result.data);
+        return result.data;
+    } catch (err) {
+        console.error('err', err);
+        throw err;
+    }
+};
+
 const userService = {
     addUser,
     getUserList,
     getUserDetail,
+    modifyUser,
+    deleteUser,
 }
 
 export default userService;
