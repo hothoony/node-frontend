@@ -1,5 +1,5 @@
-// import userService from "./services/user-service1-class";
-import userService from "./services/user-service2-function";
+import userService from "./services/user-service1-class";
+// import userService from "./services/user-service2-function";
 
 const MyApp = () => {
 

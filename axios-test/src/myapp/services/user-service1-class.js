@@ -33,7 +33,9 @@ class UserService {
     async getUserList() {
         try {
             // console.log('getUserList');
-            const result = await this.axiosInstance.get('/users/search?q=John');
+            const queryParams = {q: 'John'};
+            // const result = await this.axiosInstance.get('/users/search?q=John');
+            const result = await this.axiosInstance.get('/users/search', {params: queryParams});
             // console.log('result', result);
             // console.log('result status', result.status, result.statusText);
             if (result.status !== 200) {
@@ -50,7 +52,7 @@ class UserService {
     async getUserDetail(userId) {
         try {
             // console.log('getUserDetail');
-            const result = await this.axiosInstance.get('/users/' + userId);
+            const result = await this.axiosInstance.get(`/users/${userId}`);
             // console.log('result', result);
             // console.log('result status', result.status, result.statusText);
             if (result.status !== 200) {
