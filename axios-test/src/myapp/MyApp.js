@@ -10,9 +10,14 @@ const MyApp = () => {
         // headers: {'X-Custom-Header': 'foobat'},
     });
 
-    const getUserList2 = async () => {
-        console.log('getUserList2');
+    const userList = async () => {
+        console.log('userList');
         const result = await userService.getUserList();
+        console.log('result', result);
+    }
+    const userDetail = async () => {
+        console.log('userDetail');
+        const result = await userService.getUserDetail(3);
         console.log('result', result);
     }
     
@@ -22,7 +27,10 @@ const MyApp = () => {
                 MyApp
             </div>
             <div>
-                <button onClick={getUserList2}>getUserList</button>
+                <button onClick={userList}>userList</button>
+            </div>
+            <div>
+                <button onClick={userDetail}>userDetail</button>
             </div>
         </div>
     );
