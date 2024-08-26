@@ -6,7 +6,7 @@ const axiosInstance = axios.create({
     headers: {'X-Custom-Header': 'foobat'},
 });
 
-const userService = () => {
+const UserService = () => {
 
     const getUserList = async () => {
         try {
@@ -31,4 +31,4 @@ const userService = () => {
 
 }
 
-export default userService();
+export default UserService();

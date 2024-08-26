@@ -1,6 +1,6 @@
 import axios from "axios";
 
-class userService {
+class UserService {
 
     constructor() {
         this.axiosInstance = axios.create({
@@ -28,4 +28,4 @@ class userService {
     }
 }
 
-export default new userService();
+export default new UserService();
