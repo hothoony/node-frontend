@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Button from './components/button';
 
 function App() {
   return (
@@ -8,7 +9,12 @@ function App() {
       <header className="App-header">
 
         <p>
-          Readt + Typescript
+          <div>
+            Readt + Typescript
+          </div>
+          <div>
+            <Button backgroundColor="red" fontSize={10} padding={[10, 20, 30, 40]} />
+          </div>
         </p>
 
       </header>
