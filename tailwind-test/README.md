@@ -8,6 +8,8 @@
 in.css (src file) -->> tailwind -->> out.css (public file)
 ```
 
+<br>
+
 ## `tailwindcss` 설치하기
 
 ### `tailwindcss` 설치
@@ -17,20 +19,22 @@ npm install -D tailwindcss
 ```
 
 ### `tailwind.config.js` 파일
-- ### `tailwind.config.js` 파일을 생성한다
+- ### tailwind.config.js 파일을 생성한다
 ```bash
 npx tailwindcss init
 ```
-- ### `tailwind.config.js` 파일 내용을 수정한다
+- ### tailwind.config.js 파일 내용을 수정한다
 ```javascript
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'], // 수정
   theme: {
     extend: {},
   },
   plugins: [],
 }
 ```
+
+<br>
 
 ## `tailwindcss` 사용하기
 
@@ -63,4 +67,17 @@ npx tailwindcss -i ./src/css/in.css -o ./public/css/out.css
 - ### yarn 명령으로 css 를 빌드한다
 ```bash
 yarn css
+```
+
+<br>
+
+## App.js 에 tailwindcss 적용하기
+- className 으로 클래스명을 적용한다
+```javascript
+// App.js
+
+import './css/out.css';
+
+<div className="text-red-400">Tailwind test</div>
+<div className="text-red-400 text-2xl">Tailwind test</div>
 ```

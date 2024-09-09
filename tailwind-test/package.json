@@ -13,6 +13,7 @@
   },
   "scripts": {
     "css": "tailwindcss build src/css/in.css -o src/css/out.css",
+    "css2": "tailwindcss build src/css/in.css -o public/css/out.css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
