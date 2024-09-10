@@ -1,14 +1,58 @@
 
-## 필수 패키지 설치
+## 프로젝트 생성
 ```bash
-typescript
-react-router-dom
+npx create-react-app react-app-01 --template typescript
+```
 
-axios
-dotenv
-cross-env
-recoil
-tailwindcss
+## 패키지 설치
+```bash
+yarn add react-router-dom
+yarn add tailwindcss
+
+# axios
+# dotenv
+# cross-env
+# recoil
+```
+
+## tailwindcss 설정
+
+### tailwind.config.js 파일 생성
+```bash
+npx tailwindcss init
+```
+```javascript
+// tailwind.config.js
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+### src/css/tailwind.css 파일 생성
+```css
+/* src/css/tailwind.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+### index.tsx 수정
+```javascript
+import './css/tailwind.css';
+```
+
+### tailwindcss 적용
+```javascript
+<div className="text-blue-600">
+    Home
+</div>
 ```
 
 ## react-router-dom v5 v6 차이점

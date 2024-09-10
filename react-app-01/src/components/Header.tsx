@@ -1,6 +1,6 @@
 export default function Header() {
     return (
-        <div>
+        <div className="flex h-full flex-col justify-between overflow-scroll">
             Header
         </div>
     );
