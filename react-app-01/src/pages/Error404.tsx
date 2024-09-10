@@ -4,9 +4,9 @@ export default function Error404() {
     return (
         <div>
             Error404
-            <div>
+            {/* <div>
                 <Link to="/">Home</Link>
-            </div>
+            </div> */}
         </div>
     );
 }

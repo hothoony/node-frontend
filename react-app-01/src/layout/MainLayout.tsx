@@ -5,10 +5,12 @@ import Nav from "../components/Nav";
 
 export default function MainLayout() {
     return (
-        <div>
+        <div className="">
             <Header />
             <Nav />
-            <Outlet />
+            <div className="w-full bg-red-200">
+                <Outlet />
+            </div>
             <Footer />
         </div>
     );
