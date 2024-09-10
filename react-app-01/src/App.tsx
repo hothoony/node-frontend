@@ -1,7 +1,5 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Link, NavLink, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import About from './pages/About';
@@ -14,6 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+
         {/* MainLayout 사용 */}
         <Route element={<MainLayout />}>
           <Route path='/' element={<Home />} />
@@ -21,10 +20,12 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/member' element={<Member />} />
         </Route>
+
         {/* ErrorLayout 사용 */}
         <Route element={<ErrorLayout />}>
           <Route path='*' element={<Error404 />} />
         </Route>
+
       </Routes>
     </BrowserRouter>
   );
