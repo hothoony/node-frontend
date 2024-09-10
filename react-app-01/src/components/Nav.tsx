@@ -1,10 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
 
 export default function Nav() {
+
+    const nav1Display = 'none';
+    const nav2Display = 'block';
+
     return (
         <div>
             Nav
-            <div>
+            <div style={{display: nav1Display}}>
                 <h3>Menu - Link 사용</h3>
                 <ul>
                 <li><Link to="/">Home</Link></li>
@@ -15,7 +19,7 @@ export default function Nav() {
                 </ul>
             </div>
 
-            <div>
+            <div style={{display: nav2Display}}>
                 <h3>Menu - NavLink 사용</h3>
                 <ul>
                 <li><NavLink to="/">Home</NavLink></li>
