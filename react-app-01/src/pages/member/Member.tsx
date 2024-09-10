@@ -2,7 +2,7 @@
 export default function Member() {
     return (
         <div>
-            Member
+            Member page
         </div>
     );
 }
