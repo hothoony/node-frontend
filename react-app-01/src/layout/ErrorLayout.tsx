@@ -5,13 +5,13 @@ import Nav from "../components/Nav";
 
 export default function ErrorLayout() {
     return (
-        <div className="">
-            <Header />
+        <div className="flex flex-col min-h-screen">
+            <Header className="fixed top-0 left-0 w-full" />
             <Nav />
             <div className="w-full bg-red-200">
                 <Outlet />
             </div>
-            <Footer />
+            <Footer className="fixed bottom-0 left-0 w-full" />
         </div>
     );
 }
